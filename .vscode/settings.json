@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "files.associations": {
+    "*.css": "css"
+  }
+}

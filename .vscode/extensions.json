@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "jpoissonnier.vscode-styled-components",
+    "kumar-harsh.graphql-for-vscode"
+  ]
+}

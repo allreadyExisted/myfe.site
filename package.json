@@ -1,0 +1,60 @@
+{
+  "name": "myfe.site",
+  "private": true,
+  "description": "MyFE",
+  "version": "0.1.0",
+  "author": "Vitaliy Polyansky <vit.polyanskiy@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/alreadyExisted/myfe.site/issues"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "dotenv": "^7.0.0",
+    "gatsby": "^2.2.5",
+    "gatsby-plugin-catch-links": "^2.0.13",
+    "gatsby-plugin-feed": "^2.1.0",
+    "gatsby-plugin-google-analytics": "^2.0.17",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-typography": "^2.2.10",
+    "gatsby-remark-autolink-headers": "^2.0.16",
+    "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.2.6",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-source-contentful": "^2.0.42",
+    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prismjs": "^1.15.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.2.0",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "homepage": "https://github.com/alreadyExisted/myfe.site#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alreadyExisted/myfe.site.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  }
+}
