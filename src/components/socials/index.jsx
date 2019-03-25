@@ -22,11 +22,16 @@ export const Socials = () => {
     <div>
       <H3>Мои контакты</H3>
       <P>
-        🍒 GH <a href="https://github.com/alreadyExisted">alreadyExisted</a>
+        🍒 GH{' '}
+        <a href="https://github.com/alreadyExisted" target="_blank">
+          alreadyExisted
+        </a>
       </P>
       <P>
         🍍 GH{' '}
-        <a href="https://github.com/easy-boilerplates">easy-boilerplates</a>
+        <a href="https://github.com/easy-boilerplates" target="_blank">
+          easy-boilerplates
+        </a>
       </P>
       <P>
         🍉{' '}
