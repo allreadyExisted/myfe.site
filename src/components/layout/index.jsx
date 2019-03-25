@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LayoutWrapper, LayoutContainer } from './styles'
 
-export default ({ children }) => {
+export const Layout = ({ children }) => {
   const [theme, setTheme] = useState(null)
   useEffect(() => {
     setTheme(window.__theme)

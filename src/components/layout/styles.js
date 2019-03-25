@@ -3,10 +3,21 @@ import {
   rhythm
 } from 'utils/typography'
 
+const Card = styled.div `
+  padding: ${rhythm(3 / 4)};
+  background: #fff;
+`
+
 export const LayoutWrapper = styled.div `
-  min-height: 100vh;
+  max-width: ${rhythm(36)};
+  min-height: calc(100vh - 5.25rem);
+  margin-top: 2.625rem;
+  margin-bottom: 2.625rem;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--text-normal);
-  background: var(--bg);
+  background: #fff;
+  border-radius: .5rem;
   transition: color .2s ease-out, background .2s ease-out;
 `
 

@@ -6,6 +6,7 @@ export const withMappedProps = Component => {
       data: { allContentfulArticle },
       ...rest
     } = props
+
     const articles = allContentfulArticle.edges.map(({ node }) => ({
       title: node.title,
       spoiler: node.spoiler,

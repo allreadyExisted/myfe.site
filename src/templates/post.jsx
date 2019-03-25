@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from 'components/layout'
+import { Layout, Header } from 'components'
 import { withMappedProps } from 'hocs/with-mapped-props'
 
 export default withMappedProps(({ articles }) => {
   return (
     <Layout>
+      <Header heading="h3" />
       <article>
         <h1>{articles[0].title}</h1>
         <section dangerouslySetInnerHTML={{ __html: articles[0].content }} />

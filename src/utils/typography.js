@@ -1,4 +1,4 @@
-import 'theme/fonts/fonts-shared.css'
+import 'theme/fonts/index.css'
 import 'theme/global.css'
 
 import Typography from "typography"

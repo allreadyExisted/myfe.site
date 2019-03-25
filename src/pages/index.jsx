@@ -1,20 +1,35 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
-import Layout from 'components/layout'
+import { Layout, Header, Bio } from 'components'
+import { rhythm } from 'utils/typography'
 import { withMappedProps } from 'hocs/with-mapped-props'
+
+const H3 = styled.h3`
+  font-family: Montserrat, sans-serif;
+  font-size: ${rhythm(1)};
+  margin-bottom: ${rhythm(1 / 4)};
+`
 
 export default withMappedProps(({ articles }) => {
   return (
     <Layout>
-      <h1>MyFE</h1>
+      <Header heading="h1" />
+      <Bio />
       {articles.map(article => (
         <article key={article.link}>
           <header>
-            <h3>
-              <Link to={article.link} rel="bookmark">
+            <H3>
+              <Link
+                to={article.link}
+                rel="bookmark"
+                style={{
+                  boxShadow: 'none'
+                }}
+              >
                 {article.title}
               </Link>
-            </h3>
+            </H3>
           </header>
           <section dangerouslySetInnerHTML={{ __html: article.spoiler }} />
         </article>
