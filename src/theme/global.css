@@ -190,3 +190,9 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
+
+@media (max-width: 1024px) {
+  body {
+    background: #fff;
+  }
+}

@@ -5,7 +5,7 @@ module.exports = {
     title: `MyFE`,
     author: `Vitaliy Poliansky`,
     description: `Personal plog by Vitaliy Poliansky.`,
-    siteUrl: `https://myfe.site/`,
+    siteUrl: `https://myfe.site`,
     social: {
       linkedin: `vitaliy-polyanskiy-6930b515b`,
       instagram: `vitaliypolyansky`
@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
+        name: `assets`,
+        path: `${__dirname}/src/assets`
       }
     },
     {
@@ -80,7 +80,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`
+        icon: `src/assets/icon.png`
       }
     },
     `gatsby-plugin-offline`,

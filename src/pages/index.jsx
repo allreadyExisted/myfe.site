@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
-import { Layout, Header, Bio } from 'components'
+import { Layout, Header, Bio, Socials } from 'components'
 import { rhythm } from 'utils/typography'
+import { formatPostDate } from 'utils/helpers'
 import { withMappedProps } from 'hocs/with-mapped-props'
 
 const H3 = styled.h3`
@@ -16,6 +17,7 @@ export default withMappedProps(({ articles }) => {
     <Layout>
       <Header heading="h1" />
       <Bio />
+      <Socials />
       {articles.map(article => (
         <article key={article.link}>
           <header>
@@ -30,6 +32,7 @@ export default withMappedProps(({ articles }) => {
                 {article.title}
               </Link>
             </H3>
+            <small>{formatPostDate(article.publishedAt, 'ru')}</small>
           </header>
           <section dangerouslySetInnerHTML={{ __html: article.spoiler }} />
         </article>

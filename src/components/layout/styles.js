@@ -3,11 +3,6 @@ import {
   rhythm
 } from 'utils/typography'
 
-const Card = styled.div `
-  padding: ${rhythm(3 / 4)};
-  background: #fff;
-`
-
 export const LayoutWrapper = styled.div `
   max-width: ${rhythm(36)};
   min-height: calc(100vh - 5.25rem);

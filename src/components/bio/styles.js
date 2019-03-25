@@ -7,7 +7,7 @@ import {
 
 export const BioWrap = styled.div `
   display: flex;
-  margin-bottom: ${rhythm(2)};
+  margin-bottom: ${rhythm(.5)};
 `
 
 export const BioImg = styled.img `

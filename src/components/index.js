@@ -10,3 +10,7 @@ export {
   Header
 }
 from './header'
+export {
+  Socials
+}
+from './socials'

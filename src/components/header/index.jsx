@@ -4,7 +4,7 @@ import { HeaderWrap, HeaderH1, HeaderH3 } from './styles'
 
 export const Header = ({ heading }) => {
   const isH3 = heading === 'h3'
-  const Heading = isH3 ? HeaderH1 : HeaderH3
+  const Heading = isH3 ? HeaderH3 : HeaderH1
   return (
     <HeaderWrap>
       <Heading>
