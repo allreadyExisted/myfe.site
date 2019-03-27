@@ -3,7 +3,9 @@ import {
   rhythm
 } from 'utils/typography'
 
-export const LayoutWrapper = styled.div `
+const Wrapper = styled.div `
+  display: flex;
+  width: 100%;
   max-width: ${rhythm(36)};
   min-height: calc(100vh - 5.25rem);
   margin-top: 2.625rem;
@@ -16,9 +18,17 @@ export const LayoutWrapper = styled.div `
   transition: color .2s ease-out, background .2s ease-out;
 `
 
-export const LayoutContainer = styled.div `
+const Container = styled.div `
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   max-width: ${rhythm(24)};
   margin-left: auto;
   margin-right: auto;
   padding: 2.625rem ${rhythm(3 / 4)};
 `
+
+export const styles = {
+  Wrapper,
+  Container
+}

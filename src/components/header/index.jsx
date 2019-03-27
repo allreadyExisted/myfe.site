@@ -1,24 +1,18 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { HeaderWrap, HeaderH1, HeaderH3 } from './styles'
+import { styles } from './styles'
+
+const { Wrap, H1, H3, StyledLink } = styles
 
 export const Header = ({ heading }) => {
   const isH3 = heading === 'h3'
-  const Heading = isH3 ? HeaderH3 : HeaderH1
+  const Heading = isH3 ? H3 : H1
   return (
-    <HeaderWrap>
+    <Wrap>
       <Heading>
-        <Link
-          style={{
-            color: isH3 ? 'var(--lime)' : 'var(--text-title)',
-            textDecoration: 'none',
-            boxShadow: 'none'
-          }}
-          to="/"
-        >
+        <StyledLink isH3={isH3} to="/">
           MyFE
-        </Link>
+        </StyledLink>
       </Heading>
-    </HeaderWrap>
+    </Wrap>
   )
 }

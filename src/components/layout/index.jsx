@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { LayoutWrapper, LayoutContainer } from './styles'
+import { styles } from './styles'
+
+const { Wrapper, Container } = styles
 
 export const Layout = ({ children }) => {
   const [theme, setTheme] = useState(null)
@@ -11,8 +13,8 @@ export const Layout = ({ children }) => {
   }, [])
 
   return (
-    <LayoutWrapper>
-      <LayoutContainer>{children}</LayoutContainer>
-    </LayoutWrapper>
+    <Wrapper>
+      <Container>{children}</Container>
+    </Wrapper>
   )
 }

@@ -1,21 +1,41 @@
 import React from 'react'
-import profilePic from 'assets/my-photo.jpg'
-import { BioWrap, BioImg } from './styles'
+import { graphql, StaticQuery } from 'gatsby'
+import { styles } from './styles'
 
-export const Bio = () => {
-  return (
-    <BioWrap>
-      <BioImg src={profilePic} alt="alreadyExisted" />
-      <p style={{ maxWidth: 320 }}>
-        Personale blog by{' '}
-        <a
-          href="https://www.linkedin.com/in/vitaliy-polyanskiy-6930b515b/"
-          target="_blank"
-        >
-          Vitaliy Polynskiy
-        </a>
-        . Архив магии и ужасов в JS😀
-      </p>
-    </BioWrap>
-  )
-}
+const { Wrap } = styles
+
+export const Bio = () => (
+  <StaticQuery
+    query={graphql`
+      {
+        allFile(filter: { name: { eq: "my-photo" } }) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
+      }
+    `}
+    render={({
+      allFile: {
+        edges: [
+          {
+            node: { publicURL }
+          }
+        ]
+      }
+    }) => (
+      <Wrap>
+        <img src={publicURL} alt="alreadyExisted" />
+        <p style={{ maxWidth: 320 }}>
+          Personale blog by{' '}
+          <a href="https://www.linkedin.com/in/vitaliy-polyanskiy-6930b515b/" target="_blank">
+            Vitaliy Polynskiy
+          </a>
+          . Архив магии и ужасов в JS😀
+        </p>
+      </Wrap>
+    )}
+  />
+)
