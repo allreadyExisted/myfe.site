@@ -1,3 +1,4 @@
 User-agent: *
 Disallow:
 Host: https://myfe.site/
+Sitemap: https://myfe.site/sitemap.xml
