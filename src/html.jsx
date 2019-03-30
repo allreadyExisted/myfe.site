@@ -12,6 +12,7 @@ export default class HTML extends React.Component {
           {headComponents}
         </head>
         <body {...bodyAttributes} className="light">
+          <noscript key="noscript">Your browser does not support JavaScript!</noscript>
           {preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
           {postBodyComponents}

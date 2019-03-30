@@ -24,8 +24,10 @@ const H3 = styled.h3`
   line-height: 2.625rem;
 `
 
-const StyledLink = styled(({ isH3, ...props }) => <Link {...props} />)`
-  color: ${props => (props.isH3 ? 'var(--lime)' : 'var(--text-title)')};
+const LinkComponent = ({ isH3, ...props }) => <Link {...props} />
+
+const StyledLink = styled(LinkComponent)`
+  color: ${props => (props.isH3 ? 'var(--main-color)' : 'var(--text-title)')};
   text-decoration: none;
   box-shadow: none;
 `
