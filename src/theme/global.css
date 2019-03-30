@@ -71,6 +71,10 @@ pre[class*='language-'] ::selection {
   white-space: normal;
 }
 
+.token.plain-text {
+  color: #fff;
+}
+
 .token.string,
 .token.url {
   color: #ce9178;
@@ -88,13 +92,9 @@ pre[class*='language-'] ::selection {
   color: #569cd6;
 }
 
+.token.attr-name,
 .token.attr-value {
   color: #9cdcfe;
-}
-
-.token.attr-name {
-  color: rgb(173, 219, 103);
-  font-style: italic;
 }
 
 .token.comment {

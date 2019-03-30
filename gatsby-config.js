@@ -76,8 +76,8 @@ module.exports = {
         name: `MyFE`,
         short_name: `MyFE`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#55e5bb`,
+        background_color: `#3161a3`,
+        theme_color: `#3161a3`,
         display: `minimal-ui`,
         icon: `src/assets/icon.png`
       }
