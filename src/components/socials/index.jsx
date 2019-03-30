@@ -20,23 +20,27 @@ const query = graphql`
 
 export const Socials = () => {
   const publicURL = getPublicUrl(useStaticQuery(query))
+  const commonProps = {
+    target: '_blank',
+    rel: 'noopener noreferrer'
+  }
   return (
     <Wrap>
       <P>
         <GithubIcon />
-        <a href={GH_PERSONAL_URL} target="_blank">
+        <a href={GH_PERSONAL_URL} {...commonProps}>
           alreadyExisted
         </a>
       </P>
       <P>
         <GithubIcon />
-        <a href={GH_TEMPLATES_URL} target="_blank">
+        <a href={GH_TEMPLATES_URL} {...commonProps}>
           easy-boilerplates
         </a>
       </P>
       <P>
         <CVIcon />
-        <a href={publicURL} target="_blank">
+        <a href={publicURL} {...commonProps}>
           My CV
         </a>
       </P>
