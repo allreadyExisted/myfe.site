@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `MyFE`,
     author: `Vitaliy Poliansky`,
-    description: `Personal plog by Vitaliy Poliansky.`,
+    description: `Personal blog by Vitaliy Poliansky.`,
     siteUrl: `https://myfe.site`,
     social: {
       linkedin: `vitaliy-polyanskiy-6930b515b`,
@@ -91,6 +91,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sitemap`
   ],
 }

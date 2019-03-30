@@ -26,7 +26,7 @@ export const Bio = () => {
       <p style={{ maxWidth: 320 }}>
         Personale blog by{' '}
         <a href={IN_URL} target="_blank">
-          Vitaliy Polynskiy
+          Vitaliy Polynsky
         </a>
         . Архив магии и ужасов в JS😀
       </p>
