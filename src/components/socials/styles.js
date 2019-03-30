@@ -16,6 +16,14 @@ const commonCss = css `
 const Wrap = styled.div `
   display: flex;
   margin-top: 2rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    & p {
+      margin-bottom: 1rem;
+    }
+  }
 `
 
 const P = styled.p `

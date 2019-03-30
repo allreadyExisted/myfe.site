@@ -14,3 +14,7 @@ export {
   Socials
 }
 from './socials'
+export {
+  SEO
+}
+from './seo'

@@ -14,3 +14,16 @@ export function formatPostDate(date, lang) {
   ].filter(Boolean);
   return date.toLocaleDateString(...args);
 }
+
+export const getPublicUrl = data => {
+  const {
+    allFile: {
+      edges: [{
+        node: {
+          publicURL
+        }
+      }]
+    }
+  } = data
+  return publicURL
+}

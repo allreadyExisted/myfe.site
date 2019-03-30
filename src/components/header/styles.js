@@ -6,7 +6,7 @@ import React from 'react'
 const { fontSize, lineHeight } = scale(0.75)
 
 const Wrap = styled.header`
-  margin-bottom: 2.625rem;
+  margin-bottom: ${props => (props.isH3 ? '0' : '2.625rem')};
 `
 
 const H1 = styled.h1`

@@ -67,10 +67,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-137370242-1`,
       },
     },
-    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -78,7 +77,7 @@ module.exports = {
         short_name: `MyFE`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#55e5bb`,
         display: `minimal-ui`,
         icon: `src/assets/icon.png`
       }

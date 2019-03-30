@@ -7,7 +7,7 @@ export const Header = ({ heading }) => {
   const isH3 = heading === 'h3'
   const Heading = isH3 ? H3 : H1
   return (
-    <Wrap>
+    <Wrap isH3={isH3}>
       <Heading>
         <StyledLink isH3={isH3} to="/">
           MyFE

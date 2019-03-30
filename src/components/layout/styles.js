@@ -16,6 +16,11 @@ const Wrapper = styled.div `
   background: #fff;
   border-radius: .5rem;
   transition: color .2s ease-out, background .2s ease-out;
+
+  @media (max-width: 767px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 `
 
 const Container = styled.div `

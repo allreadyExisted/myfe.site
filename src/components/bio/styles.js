@@ -14,6 +14,14 @@ const Wrap = styled.div `
     margin-bottom: 0;
     border-radius: 50%;
   }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    & img {
+      margin-bottom: 1rem;
+    }
+  }
 `
 
 export const styles = {
