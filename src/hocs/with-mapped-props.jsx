@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const withMappedProps = Component => {
+export const withMappedArticlesProps = Component => {
   return props => {
     const {
       data: { allContentfulArticle },
@@ -12,11 +12,32 @@ export const withMappedProps = Component => {
       spoiler: node.spoiler,
       publishedAt: node.publishedAt,
       content: node.content.childMarkdownRemark.html,
-      link: node.link
+      link: node.link,
+      tags: node.tags
     }))
 
     const mappedProps = {
       articles,
+      ...rest
+    }
+    return <Component {...mappedProps} />
+  }
+}
+
+export const withMappedNotesProps = Component => {
+  return props => {
+    const {
+      data: { allContentfulNote },
+      ...rest
+    } = props
+
+    const notes = allContentfulNote.edges.map(({ node }) => ({
+      title: node.title,
+      content: node.content.childMarkdownRemark.html
+    }))
+
+    const mappedProps = {
+      notes,
       ...rest
     }
     return <Component {...mappedProps} />

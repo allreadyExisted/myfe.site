@@ -24,6 +24,11 @@ const Wrap = styled.div `
   }
 `
 
+const P = styled.p `
+  max-width: 320px;
+`
+
 export const styles = {
-  Wrap
+  Wrap,
+  P
 }

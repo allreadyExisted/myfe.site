@@ -4,7 +4,7 @@ import { getPublicUrl } from 'utils/helpers'
 import { IN_URL } from 'utils/constants'
 import { styles } from './styles'
 
-const { Wrap } = styles
+const { Wrap, P } = styles
 
 const query = graphql`
   {
@@ -23,13 +23,13 @@ export const Bio = () => {
   return (
     <Wrap>
       <img src={publicURL} alt="alreadyExisted" />
-      <p style={{ maxWidth: 320 }}>
+      <P>
         Personale blog by{' '}
         <a href={IN_URL} target="_blank">
           Vitaliy Polynsky
         </a>
         . Архив магии и ужасов в JS😀
-      </p>
+      </P>
     </Wrap>
   )
 }

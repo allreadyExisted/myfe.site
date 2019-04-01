@@ -7,9 +7,10 @@ exports.createPages = ({
   const {
     createPage
   } = actions
+
   return graphql(`
-    {
-      allContentfulArticle {
+    query {
+      articles: allContentfulArticle {
         edges {
           node {
             title
@@ -24,15 +25,25 @@ exports.createPages = ({
           }
         }
       }
+      tags: allContentfulTag {
+        edges {
+          node {
+            name
+          }
+        }
+      }
     }
   `).then(({
     data: {
-      allContentfulArticle: {
-        edges
+      articles: {
+        edges: articlesEdges
+      },
+      tags: {
+        edges: tagsEdges
       }
     }
   }) => {
-    edges.forEach(({
+    articlesEdges.forEach(({
       node
     }) => {
       createPage({
@@ -40,6 +51,17 @@ exports.createPages = ({
         component: path.resolve(`./src/templates/post.jsx`),
         context: {
           slug: node.link
+        }
+      })
+    })
+    tagsEdges.forEach(({
+      node
+    }) => {
+      createPage({
+        path: `/tags/${node.name.toLowerCase()}`,
+        component: path.resolve(`./src/templates/tag.jsx`),
+        context: {
+          tag: node.name
         }
       })
     })

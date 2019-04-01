@@ -1,22 +1,29 @@
-import { scale } from 'utils/typography'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
 import React from 'react'
+import styled from 'styled-components'
+import {
+  Link
+} from 'gatsby'
+import {
+  scale
+} from 'utils/typography'
 
-const { fontSize, lineHeight } = scale(0.75)
+const h1Scale = scale(0.75)
 
-const Wrap = styled.header`
-  margin-bottom: ${props => (props.isH3 ? '0' : '2.625rem')};
+const Wrap = styled.header `
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: ${props => (props.isMain ? '2.625rem' : '0')};
 `
 
-const H1 = styled.h1`
+const H1 = styled.h1 `
   margin-top: 0;
   margin-bottom: 0;
-  font-size: ${fontSize};
-  line-height: ${lineHeight};
+  font-size: ${h1Scale.fontSize};
+  line-height: ${h1Scale.lineHeight};
 `
 
-const H3 = styled.h3`
+const H3 = styled.h3 `
   height: 42;
   margin-top: 0;
   margin-bottom: 0;
@@ -24,10 +31,29 @@ const H3 = styled.h3`
   line-height: 2.625rem;
 `
 
-const LinkComponent = ({ isH3, ...props }) => <Link {...props} />
+const LinkComponent = ({
+  isMain,
+  ...props
+}) => < Link {
+  ...props
+}
+/>
 
-const StyledLink = styled(LinkComponent)`
-  color: ${props => (props.isH3 ? 'var(--main-color)' : 'var(--text-title)')};
+const HeaderLink = styled(LinkComponent)
+`
+  color: ${props => (props.isMain ?  'var(--text-title)' : 'var(--main-color)')};
+  text-decoration: none;
+  box-shadow: none;
+`
+
+const linkScale = scale(0.1)
+
+const StyledLink = styled(LinkComponent)
+`
+  font-family: Montserrat, sans-serif;
+  font-size: ${linkScale.fontSize};
+  line-height: ${linkScale.lineHeight};
+  color: var(--title-color);
   text-decoration: none;
   box-shadow: none;
 `
@@ -36,5 +62,6 @@ export const styles = {
   Wrap,
   H1,
   H3,
-  StyledLink
+  HeaderLink,
+  Link: StyledLink
 }

@@ -1,16 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, Link } from 'gatsby'
-import { Layout, Header, Bio, Socials, SEO } from 'components'
-import { rhythm } from 'utils/typography'
-import { formatPostDate } from 'utils/helpers'
-import { withMappedProps } from 'hocs/with-mapped-props'
+import { graphql } from 'gatsby'
+import { Layout, Header, Bio, Socials, SEO, ArticlesList } from 'components'
+import { withMappedArticlesProps } from 'hocs/with-mapped-props'
 
-const H3 = styled.h3`
-  font-family: Montserrat, sans-serif;
-  font-size: ${rhythm(1)};
-  margin-bottom: ${rhythm(1 / 4)};
-`
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,32 +11,14 @@ const Wrap = styled.div`
   height: 100%;
 `
 
-export default withMappedProps(({ articles }) => (
+export default withMappedArticlesProps(({ articles }) => (
   <Layout>
     <Wrap>
       <div>
         <SEO />
-        <Header heading="h1" />
+        <Header isMain />
         <Bio />
-        {articles.map(article => (
-          <article key={article.link}>
-            <header>
-              <H3>
-                <Link
-                  to={article.link}
-                  rel="bookmark"
-                  style={{
-                    boxShadow: 'none'
-                  }}
-                >
-                  {article.title}
-                </Link>
-              </H3>
-              <small>{formatPostDate(article.publishedAt, 'ru')}</small>
-            </header>
-            <section dangerouslySetInnerHTML={{ __html: article.spoiler }} />
-          </article>
-        ))}
+        <ArticlesList articles={articles} />
       </div>
       <Socials />
     </Wrap>
@@ -64,6 +39,10 @@ export const query = graphql`
             }
           }
           link
+          tags {
+            name
+            color
+          }
         }
       }
     }
