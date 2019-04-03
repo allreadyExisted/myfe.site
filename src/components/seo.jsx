@@ -68,6 +68,12 @@ const SEO = ({ title, description, slug }) => {
           content: `${siteMetadata.siteUrl}/${publicURL}`
         }
       ]}
+      link={[
+        {
+          ref: 'canonical',
+          href: url
+        }
+      ]}
     />
   )
 }
