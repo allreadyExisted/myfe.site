@@ -14,6 +14,7 @@ exports.createPages = ({
         edges {
           node {
             title
+            description
             spoiler
             publishedAt
             content {

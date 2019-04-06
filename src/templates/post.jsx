@@ -18,6 +18,7 @@ export const query = graphql`
       edges {
         node {
           title
+          description
           spoiler
           publishedAt
           content {
