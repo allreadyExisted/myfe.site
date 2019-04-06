@@ -11,14 +11,17 @@ export const Layout = ({ children }) => (
   </Wrapper>
 )
 
-export const CommonLayout = ({ article, children }) => {
+export const CommonLayout = ({ article, title, description, children }) => {
   const seoProps = article
     ? {
         title: article.title,
-        description: article.spoiler,
+        description: article.description,
         slug: article.link
       }
-    : {}
+    : {
+        title,
+        description
+      }
   return (
     <Layout>
       <SEO {...seoProps} />

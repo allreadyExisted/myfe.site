@@ -9,6 +9,7 @@ export const withMappedArticlesProps = Component => {
 
     const articles = allContentfulArticle.edges.map(({ node }) => ({
       title: node.title,
+      description: node.description,
       spoiler: node.spoiler,
       publishedAt: node.publishedAt,
       content: node.content.childMarkdownRemark.html,

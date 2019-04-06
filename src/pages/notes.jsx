@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { CommonLayout, NotesList } from 'components'
 
 export default withMappedNotesProps(({ notes }) => (
-  <CommonLayout>
+  <CommonLayout title="Мои заметки по JavaScript" description="Баги/фичи с которыми я сталкиваюсь при работе с JS.">
     <h1>Заметки</h1>
     <NotesList notes={notes} />
   </CommonLayout>
