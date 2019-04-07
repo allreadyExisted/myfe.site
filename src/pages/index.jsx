@@ -30,20 +30,7 @@ export const query = graphql`
     allContentfulArticle {
       edges {
         node {
-          title
-          description
-          spoiler
-          publishedAt
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
-          link
-          tags {
-            name
-            color
-          }
+          ...NodeFragment
         }
       }
     }

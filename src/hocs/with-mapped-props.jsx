@@ -12,6 +12,10 @@ export const withMappedArticlesProps = Component => {
       description: node.description,
       spoiler: node.spoiler,
       publishedAt: node.publishedAt,
+      banner: {
+        fluid: node.banner.fluid,
+        name: node.banner.title
+      },
       content: node.content.childMarkdownRemark.html,
       link: node.link,
       tags: node.tags

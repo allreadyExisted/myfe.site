@@ -17,16 +17,7 @@ export const query = graphql`
     allContentfulArticle(filter: { link: { eq: $slug } }) {
       edges {
         node {
-          title
-          description
-          spoiler
-          publishedAt
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
-          link
+          ...NodeFragment
         }
       }
     }

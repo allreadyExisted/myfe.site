@@ -4,7 +4,7 @@ import { styles } from './styles'
 import { ui } from 'ui'
 
 const { H3 } = ui
-const { Tags, TagsTitle, HeaderLink, TagLink } = styles
+const { Banner, Tags, TagsTitle, HeaderLink, TagLink } = styles
 
 export const ArticlesList = ({ articles }) =>
   articles.map(article => (
@@ -18,6 +18,7 @@ export const ArticlesList = ({ articles }) =>
         <small>{formatPostDate(article.publishedAt, 'ru')}</small>
       </header>
       <section dangerouslySetInnerHTML={{ __html: article.spoiler }} />
+      <Banner fluid={article.banner.fluid} alt={article.banner.name} />
       {article.tags && (
         <Tags>
           <TagsTitle>Метки:</TagsTitle>

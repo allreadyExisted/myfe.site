@@ -8,19 +8,11 @@ const Wrapper = styled.div `
   width: 100%;
   max-width: ${rhythm(36)};
   min-height: calc(100vh - 5.25rem);
-  margin-top: 2.625rem;
-  margin-bottom: 2.625rem;
   margin-left: auto;
   margin-right: auto;
   color: var(--text-normal);
   background: #fff;
-  border-radius: .5rem;
   transition: color .2s ease-out, background .2s ease-out;
-
-  @media (max-width: 767px) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 `
 
 const Container = styled.div `

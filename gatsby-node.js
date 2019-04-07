@@ -13,15 +13,6 @@ exports.createPages = ({
       articles: allContentfulArticle {
         edges {
           node {
-            title
-            description
-            spoiler
-            publishedAt
-            content {
-              childMarkdownRemark {
-                html
-              }
-            }
             link
           }
         }

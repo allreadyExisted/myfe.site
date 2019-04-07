@@ -15,19 +15,7 @@ export const query = graphql`
     allContentfulArticle(filter: { tags: { elemMatch: { name: { eq: $tag } } } }) {
       edges {
         node {
-          title
-          spoiler
-          publishedAt
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
-          link
-          tags {
-            name
-            color
-          }
+          ...NodeFragment
         }
       }
     }

@@ -2,9 +2,16 @@ import styled from 'styled-components'
 import {
   ui
 } from 'ui'
+import Img from 'gatsby-image'
 import {
   rhythm
 } from 'utils/typography'
+
+const Banner = styled(Img)
+`
+  margin-top: ${rhythm(1 / 2)};
+  margin-bottom: 0;
+`
 
 const Tags = styled.div `
   display: flex;
@@ -31,6 +38,7 @@ const TagLink = styled(ui.Link)
 
 
 export const styles = {
+  Banner,
   Tags,
   TagsTitle,
   HeaderLink: ui.Link,
