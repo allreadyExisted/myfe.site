@@ -27,7 +27,7 @@ export default withMappedArticlesProps(({ articles }) => (
 
 export const query = graphql`
   {
-    allContentfulArticle {
+    allContentfulArticle(sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           ...NodeFragment

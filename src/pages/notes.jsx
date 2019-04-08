@@ -12,7 +12,7 @@ export default withMappedNotesProps(({ notes }) => (
 
 export const query = graphql`
   {
-    allContentfulNote {
+    allContentfulNote(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           title
