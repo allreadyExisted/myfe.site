@@ -27,3 +27,7 @@ export {
   NotesList
 }
 from './notes-list'
+export {
+  JustComments
+}
+from './just-comments'

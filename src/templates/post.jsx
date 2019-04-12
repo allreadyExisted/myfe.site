@@ -1,14 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { CommonLayout } from 'components'
+import { CommonLayout, JustComments } from 'components'
 import { withMappedArticlesProps } from 'hocs/with-mapped-props'
 
-export default withMappedArticlesProps(({ articles }) => (
-  <CommonLayout article={articles[0]}>
+export default withMappedArticlesProps(({ articles: [article] }) => (
+  <CommonLayout article={article}>
     <article>
-      <h1>{articles[0].title}</h1>
-      <section dangerouslySetInnerHTML={{ __html: articles[0].content }} />
+      <h1>{article.title}</h1>
+      <section dangerouslySetInnerHTML={{ __html: article.content }} />
     </article>
+    <JustComments />
   </CommonLayout>
 ))
 
