@@ -6,7 +6,16 @@ export class JustComments extends React.Component {
     this.ref = React.createRef()
   }
   render() {
-    return <div ref={this.ref} className="just-comments" data-apikey="7275abc4-c147-41de-8288-8e6eed26a26d" />
+    return (
+      <div
+        ref={this.ref}
+        className="just-comments"
+        data-apikey={process.env.GATSBY_JUST_COMMENTS_API_KEY}
+        data-locale="ru"
+        data-allowguests="true"
+        data-recaptcha="true"
+      />
+    )
   }
   componentDidMount() {
     const s = document.createElement('script')
