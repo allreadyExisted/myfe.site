@@ -83,7 +83,15 @@ module.exports = {
         icon: `src/assets/icon.png`
       }
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        importScripts: [
+          `./firebase-messaging-sw.js`
+        ],
+        cacheId: `myfe-offline`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,

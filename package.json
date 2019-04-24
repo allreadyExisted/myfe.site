@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "core-js": "^2.6.5",
     "dotenv": "^7.0.0",
+    "firebase": "^5.10.0",
     "gatsby": "^2.2.5",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-catch-links": "^2.0.13",
