@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import {
-  rhythm
-} from 'utils/typography'
+import { rhythm } from 'utils/typography'
 
-const Wrap = styled.div `
+const Wrap = styled.div`
   display: flex;
-  margin-bottom: ${rhythm(.5)};
+  margin-bottom: ${rhythm(0.5)};
 
   & img {
     width: ${rhythm(2)};
@@ -24,7 +22,7 @@ const Wrap = styled.div `
   }
 `
 
-const P = styled.p `
+const P = styled.p`
   max-width: 320px;
 `
 

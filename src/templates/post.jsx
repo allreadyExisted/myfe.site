@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { CommonLayout, JustComments } from 'components'
+import { CommonLayout } from 'components'
 import { withMappedArticlesProps } from 'hocs/with-mapped-props'
 
 export default withMappedArticlesProps(({ articles: [article] }) => (
@@ -9,7 +9,6 @@ export default withMappedArticlesProps(({ articles: [article] }) => (
       <h1>{article.title}</h1>
       <section dangerouslySetInnerHTML={{ __html: article.content }} />
     </article>
-    <JustComments />
   </CommonLayout>
 ))
 

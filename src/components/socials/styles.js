@@ -1,19 +1,13 @@
-import styled, {
-  css
-} from 'styled-components'
-import {
-  Github
-} from 'styled-icons/boxicons-logos/Github'
-import {
-  IdCard
-} from 'styled-icons/boxicons-regular/IdCard'
+import styled, { css } from 'styled-components'
+import { Github } from 'styled-icons/boxicons-logos/Github'
+import { IdCard } from 'styled-icons/boxicons-regular/IdCard'
 
-const commonCss = css `
+const commonCss = css`
   height: 1.5rem;
-  margin-right: .2rem;
+  margin-right: 0.2rem;
 `
 
-const Wrap = styled.div `
+const Wrap = styled.div`
   display: flex;
   margin-top: 2rem;
 
@@ -26,7 +20,7 @@ const Wrap = styled.div `
   }
 `
 
-const P = styled.p `
+const P = styled.p`
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
@@ -37,14 +31,12 @@ const P = styled.p `
   }
 `
 
-const GithubIcon = styled(Github)
-`
+const GithubIcon = styled(Github)`
   ${commonCss}
 `
 
-const CVIcon = styled(IdCard)
-`
-${commonCss}
+const CVIcon = styled(IdCard)`
+  ${commonCss}
 `
 
 export const styles = {

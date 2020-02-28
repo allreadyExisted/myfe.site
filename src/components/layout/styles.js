@@ -1,9 +1,7 @@
-import styled from "styled-components"
-import {
-  rhythm
-} from 'utils/typography'
+import styled from 'styled-components'
+import { rhythm } from 'utils/typography'
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
   display: flex;
   width: 100%;
   max-width: ${rhythm(36)};
@@ -12,10 +10,10 @@ const Wrapper = styled.div `
   margin-right: auto;
   color: var(--text-normal);
   background: #fff;
-  transition: color .2s ease-out, background .2s ease-out;
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 `
 
-const Container = styled.div `
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;

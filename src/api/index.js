@@ -1,8 +1,6 @@
-import {
-  graphql
-} from 'gatsby'
+import { graphql } from 'gatsby'
 
-export const query = graphql `
+export const query = graphql`
   fragment NodeFragment on ContentfulArticle {
     title
     description
