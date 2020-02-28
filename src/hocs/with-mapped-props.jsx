@@ -48,3 +48,24 @@ export const withMappedNotesProps = Component => {
     return <Component {...mappedProps} />
   }
 }
+
+export const withMappedSnippetsProps = Component => {
+  return props => {
+    const {
+      data: { allContentfulSnippet },
+      ...rest
+    } = props
+
+    const snippets = allContentfulSnippet.edges.map(({ node }) => ({
+      title: node.title,
+      content: node.content.childMarkdownRemark.html,
+      tags: node.tags
+    }))
+
+    const mappedProps = {
+      snippets,
+      ...rest
+    }
+    return <Component {...mappedProps} />
+  }
+}

@@ -1,12 +1,7 @@
 const path = require(`path`)
 
-exports.createPages = ({
-  graphql,
-  actions
-}) => {
-  const {
-    createPage
-  } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
   return graphql(`
     query {
@@ -25,37 +20,38 @@ exports.createPages = ({
         }
       }
     }
-  `).then(({
-    data: {
-      articles: {
-        edges: articlesEdges
-      },
-      tags: {
-        edges: tagsEdges
+  `).then(
+    ({
+      data: {
+        articles: { edges: articlesEdges },
+        tags: { edges: tagsEdges }
       }
+    }) => {
+      articlesEdges.forEach(({ node }) => {
+        createPage({
+          path: `/articles/${node.link}`,
+          component: path.resolve(`./src/templates/article.jsx`),
+          context: {
+            slug: node.link
+          }
+        })
+      })
+      tagsEdges.forEach(({ node }) => {
+        createPage({
+          path: `/articles/tags/${node.name.toLowerCase()}`,
+          component: path.resolve(`./src/templates/article-tag.jsx`),
+          context: {
+            tag: node.name
+          }
+        })
+        createPage({
+          path: `/snippets/tags/${node.name.toLowerCase()}`,
+          component: path.resolve(`./src/templates/snippet-tag.jsx`),
+          context: {
+            tag: node.name
+          }
+        })
+      })
     }
-  }) => {
-    articlesEdges.forEach(({
-      node
-    }) => {
-      createPage({
-        path: node.link,
-        component: path.resolve(`./src/templates/post.jsx`),
-        context: {
-          slug: node.link
-        }
-      })
-    })
-    tagsEdges.forEach(({
-      node
-    }) => {
-      createPage({
-        path: `/tags/${node.name.toLowerCase()}`,
-        component: path.resolve(`./src/templates/tag.jsx`),
-        context: {
-          tag: node.name
-        }
-      })
-    })
-  })
+  )
 }

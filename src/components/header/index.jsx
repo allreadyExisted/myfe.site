@@ -12,6 +12,7 @@ export const Header = ({ isMain }) => {
           MyFE
         </HeaderLink>
       </Heading>
+      {isMain && <Link to="/snippets">Сниппеты</Link>}
       {isMain && <Link to="/notes">Заметки</Link>}
     </Wrap>
   )

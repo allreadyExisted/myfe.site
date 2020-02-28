@@ -2,7 +2,7 @@
   "name": "myfe.site",
   "private": true,
   "description": "MyFE",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Vitaliy Polyansky <vit.polyanskiy@gmail.com>",
   "bugs": {
     "url": "https://github.com/alreadyExisted/myfe.site/issues"
