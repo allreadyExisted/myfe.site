@@ -11,16 +11,18 @@ export const Layout = ({ children }) => (
   </Wrapper>
 )
 
-export const CommonLayout = ({ article, title, description, children }) => {
+export const CommonLayout = ({ article, title, description, slug, children }) => {
   const seoProps = article
     ? {
         title: article.title,
         description: article.description,
-        slug: article.link
+        slug: `articles/${article.link}`,
+        image: `https:${article.banner.fluid.src}`
       }
     : {
         title,
-        description
+        description,
+        slug
       }
   return (
     <Layout>

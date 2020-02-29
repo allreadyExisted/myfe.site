@@ -4,7 +4,11 @@ import { CommonLayout, ArticlesList } from 'components'
 import { withMappedArticlesProps } from 'hocs/with-mapped-props'
 
 export default withMappedArticlesProps(({ articles, pathContext }) => (
-  <CommonLayout title={`Статьи по тегу ${pathContext.tag}`} description={`Перечень статей на тему ${pathContext.tag}`}>
+  <CommonLayout
+    title={`Статьи по тегу ${pathContext.tag}`}
+    description={`Перечень статей на тему ${pathContext.tag}`}
+    slug={`articles/tags/${pathContext.tag.toLowerCase()}`}
+  >
     <h1>Статьи по метке: {pathContext.tag}</h1>
     <ArticlesList articles={articles} />
   </CommonLayout>

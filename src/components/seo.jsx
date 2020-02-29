@@ -22,7 +22,7 @@ const query = graphql`
   }
 `
 
-const SEO = ({ title, description, slug }) => {
+const SEO = ({ title, description, slug, image }) => {
   const {
     seo: { siteMetadata },
     file: {
@@ -34,7 +34,8 @@ const SEO = ({ title, description, slug }) => {
     }
   } = useStaticQuery(query)
   const metaDescription = description || siteMetadata.description
-  const url = `${siteMetadata.siteUrl}/${slug}`
+  const url = slug === '/' || slug === '' ? siteMetadata.siteUrl : `${siteMetadata.siteUrl}/${slug}`
+
   return (
     <Helmet
       htmlAttributes={{ lang: 'ru' }}
@@ -65,7 +66,7 @@ const SEO = ({ title, description, slug }) => {
         },
         {
           property: 'og:image',
-          content: `${siteMetadata.siteUrl}/${publicURL}`
+          content: image || `${siteMetadata.siteUrl}/${publicURL}`
         }
       ]}
       link={[

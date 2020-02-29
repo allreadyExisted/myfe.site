@@ -7,6 +7,7 @@ export default withMappedSnippetsProps(({ snippets, pathContext }) => (
   <CommonLayout
     title={`Сниппеты по тегу ${pathContext.tag}`}
     description={`Перечень сниппетов на тему ${pathContext.tag}`}
+    slug={`snippets/tags/${pathContext.tag.toLowerCase()}`}
   >
     <h1>Сниппеты по метке: {pathContext.tag}</h1>
     <SnippetsList snippets={snippets} />

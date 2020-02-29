@@ -4,7 +4,7 @@ import { CommonLayout, SnippetsList } from 'components'
 import { withMappedSnippetsProps } from 'hocs/with-mapped-props'
 
 export default withMappedSnippetsProps(({ snippets }) => (
-  <CommonLayout title="Мои cниппеты" description="HTML, CSS, JavaScript, TypeScript сниппеты">
+  <CommonLayout title="Мои cниппеты" description="HTML, CSS, JavaScript, TypeScript сниппеты" slug="snippets">
     <h1>Сниппеты</h1>
     <SnippetsList snippets={snippets} />
   </CommonLayout>
