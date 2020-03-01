@@ -56,14 +56,29 @@ export const withMappedSnippetsProps = Component => {
       ...rest
     } = props
 
-    const snippets = allContentfulSnippet.edges.map(({ node }) => ({
-      title: node.title,
-      content: node.content.childMarkdownRemark.html,
-      tags: node.tags
-    }))
+    const snippets = []
+    const tags = {}
+
+    allContentfulSnippet.edges.forEach(({ node }) => {
+      snippets.push({
+        title: node.title,
+        content: node.content.childMarkdownRemark.html,
+        tags: node.tags
+      })
+
+      node.tags.forEach(tag => {
+        if (!tags[tag.id]) {
+          tags[tag.id] = {
+            name: tag.name,
+            color: tag.color
+          }
+        }
+      })
+    })
 
     const mappedProps = {
       snippets,
+      tags: Object.values(tags),
       ...rest
     }
     return <Component {...mappedProps} />
