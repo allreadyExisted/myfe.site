@@ -5,7 +5,7 @@ module.exports = {
     title: `MyFE`,
     author: `Vitaliy Poliansky`,
     description: `Personal blog by Vitaliy Poliansky. How JS changes my life.`,
-    siteUrl: `https://myfe.site`,
+    siteUrl: `https://www.myfe.site`,
     social: {
       linkedin: `vitaliy-polyanskiy-6930b515b`,
       instagram: `vitaliypolyansky`
